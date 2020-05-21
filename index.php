@@ -15,7 +15,8 @@ session_start();
 <?php 
 include("database.php"); ?>
 
-<h2>Profil de <?php echo $_SESSION['pseudo']; ?></h2>
+<h2>Profil de <?php echo $_SESSION['Pseudo']; ?></h2>
+
 
  <a href="home.php"> Liste des livres </a> </br>
  <a href="listeauteur.php"> Liste des auteurs </a></br>

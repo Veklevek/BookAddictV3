@@ -7,15 +7,15 @@ if(isset($_POST['formconnexion'])) {
    $pseudoconnect = htmlspecialchars($_POST['pseudoconnect']);
    $mdpconnect = sha1($_POST['mdpconnect']);
    if(!empty($pseudoconnect) AND !empty($mdpconnect)) {
-      $requser = $bdd->prepare("SELECT * FROM membre WHERE pseudo = ? AND mdp = ?");
+      $requser = $bdd->prepare("SELECT * FROM membre WHERE Pseudo = ? AND Mdp = ?");
       $requser->execute(array($pseudoconnect, $mdpconnect));
       $userexist = $requser->rowCount();
       if($userexist == 1) {
          $userinfo = $requser->fetch();
          $_SESSION['id'] = $userinfo['id'];
-         $_SESSION['pseudo'] = $userinfo['pseudo'];
+         $_SESSION['Pseudo'] = $userinfo['Pseudo'];
         // header("Location: profil.php?id=".$_SESSION['id']);
-        header("Location: index.php?id=".$_SESSION['id']);
+        header("Location: index.php");
       } else {
          $erreur = "Mauvais pseudo ou mot de passe !";
       }

@@ -1,0 +1,24 @@
+a:link {
+    color: white;
+  }
+  
+  
+  a:visited {
+    color: white;
+  }
+  
+  
+  a:hover {
+    color: grey;
+  }
+  
+  
+  a:active {
+    color: darkgrey;
+  }
+
+#nav{
+    font-size: 30px;
+    position: absolute;
+    margin-left: -400px;
+}

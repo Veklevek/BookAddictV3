@@ -1,0 +1,30 @@
+html{
+    background-color: rgb(43, 41, 41);
+}
+#nav{
+    margin-left: 30em;
+}
+
+
+a{
+    margin-left: 25em;
+    font-size: 25px;
+}
+a:link {
+    color: white;
+  }
+  
+  
+  a:visited {
+    color: white;
+  }
+  
+  
+  a:hover {
+    color: grey;
+  }
+  
+  
+  a:active {
+    color: darkgrey;
+  }

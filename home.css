@@ -1,0 +1,58 @@
+#nav{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+}
+
+a:link {
+    color: white;
+  }
+  
+  
+  a:visited {
+    color: white;
+  }
+  
+  
+  a:hover {
+    color: grey;
+  }
+  
+  
+  a:active {
+    color: darkgrey;
+  }
+
+#blocbook{
+    
+    border: 2px solid black;
+    background-color: rgb(43, 41, 41);
+    height : 300px;
+    width: 70%;
+    margin-left: 200px;
+    float: left;
+/* bloc + de mes listes livre */
+}
+
+.infobook{
+
+margin-top: -260px;
+margin-left: 450px;
+/* position dans le bloc */
+
+
+}
+#imgminiature:hover{
+    transform : scale(1.2);
+    /* Zoom sur image */
+}
+
+
+
+.titre{
+    margin-left: 300px;
+}
+html{
+    background-color :rgb(20, 41, 41);
+    color: white;
+}

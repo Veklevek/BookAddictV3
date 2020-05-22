@@ -69,6 +69,7 @@ catch(Exception $ex)
 <?php echo $bdd['titre'].'<br>'.$bdd['isbn'].'<br>'.$bdd['editeur'].'<br>'.$bdd['nom'].' '.$bdd['prenom'].'<br>'.$bdd['genre'].'<br>'.$bdd['langue'].'<br>'.$bdd['annee']?></b>
 <?php } ?>
 
+
     
         
    

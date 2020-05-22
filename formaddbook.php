@@ -1,5 +1,6 @@
 <html style="background-color: rgb(43, 41, 41)">
 <?php
+session_start();
 // ajoute de ma barre de navigation
  //include("menu.php");
  /*Formulaire Ajout d'un livre */

@@ -1,5 +1,6 @@
 <html style="background-color: rgb(43, 41, 41)">
 <?php 
+session_start();
 //include("menu.php");
 //formulaire 
 

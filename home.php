@@ -42,14 +42,14 @@ if(file_exists($couverture)){
     print'<img src="'.$img.'"/>';
     ?>
     -->
-    <img src="images/<?php echo $d['isbn'];?>.jpg" style="width : 120px;padding-bottom:120px; margin-left: 300px; margin-top:-70px;">
+    <img src="images/<?php echo $d['isbn'];?>.jpg" style="width : 100px;padding-bottom:120px; margin-left: 300px; margin-top:-70px; margin-right: 300px;">
     </div><br>
     
 
     <p class="infobook"> Auteur :  <?php echo $d['prenom'] ." ". $d['nom'] ;?>  <br>
      Genre :  <?php echo $d['libelle_genre'] ;?>  <br>
      Editeur :  <?php echo $d['libelle_editeur'] ;?>  <br>
-                        <a href="#"> Voir detail  </A> </p>
+                       <div style="margin-left: 1050px; width:200px;"> <a href="detail-livre.php?isbn=<?php echo $d['isbn']; ?>"> Voir detail  </a></div> </p>
 
     </div>
    </div>

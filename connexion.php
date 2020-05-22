@@ -7,14 +7,14 @@ if(isset($_POST['formconnexion'])) {
    $pseudoconnect = htmlspecialchars($_POST['pseudoconnect']);
    $mdpconnect = sha1($_POST['mdpconnect']);
    if(!empty($pseudoconnect) AND !empty($mdpconnect)) {
-      $requser = $bdd->prepare("SELECT * FROM membre WHERE Pseudo = ? AND Mdp = ?");
+      $requser = $bdd->prepare('SELECT * FROM Membre WHERE Pseudo = ? AND Mdp = ?');
       $requser->execute(array($pseudoconnect, $mdpconnect));
       $userexist = $requser->rowCount();
       if($userexist == 1) {
          $userinfo = $requser->fetch();
          $_SESSION['id'] = $userinfo['id'];
          $_SESSION['Pseudo'] = $userinfo['Pseudo'];
-        // header("Location: profil.php?id=".$_SESSION['id']);
+         $_SESSION['Type'] = $userfinfo['Type'];
         header("Location: index.php");
       } else {
          $erreur = "Mauvais pseudo ou mot de passe !";
@@ -24,14 +24,15 @@ if(isset($_POST['formconnexion'])) {
    }
 }
 ?>
-<html>
+<html style="background-color :rgb(20, 31, 41)">
    <head>
-      <title>Connexion</title>
+      <title >Connexion</title>
       <meta charset="utf-8">
    </head>
    <body>
+   <div id="nav"><a href="index.php" style="font-size: 40px; color: white;"> BookAddict </a></div>
       <div align="center">
-         <h2>Connexion</h2>
+         <h2 style="color:white;">Connexion</h2>
          <br /><br />
          <form method="POST" action="">
             <input type="text" name="pseudoconnect" placeholder="Pseudo" />

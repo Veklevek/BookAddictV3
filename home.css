@@ -26,7 +26,7 @@ a:link {
 #blocbook{
     
     border: 2px solid black;
-    background-color: rgb(43, 41, 41);
+    background-color :rgb(20, 31, 41);
     height : 300px;
     width: 70%;
     margin-left: 200px;
@@ -53,6 +53,8 @@ margin-left: 450px;
     margin-left: 300px;
 }
 html{
-    background-color :rgb(20, 41, 41);
+  background-color :rgb(20, 21, 41);
     color: white;
 }
+
+

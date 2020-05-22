@@ -1,10 +1,13 @@
-<html style="background-color: rgb(43, 41, 41)">
 <?php
 session_start();
 // ajoute de ma barre de navigation
  //include("menu.php");
  /*Formulaire Ajout d'un livre */
 ?>
+
+
+<html style="background-color: rgb(43, 41, 41)">
+
 </br>
 <div id="nav"><a href="index.php" style="font-size: 50px; color: white"> BookAddict </a></div>
 <p style="margin-left: 500px; font-size: 45px; color: white"> Ajouter un livre</p>

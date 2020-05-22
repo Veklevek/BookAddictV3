@@ -1,7 +1,8 @@
 
 <html style="background-color :rgb(20, 41, 41)">
-<div id="nav"><a href="index.php" style="font-size: 50px; color: white"> BookAddict </a></div>
+<div id="nav"><a href="home.php" style="font-size: 50px; color: white"> BookAddict </a></div>
 <?php
+session_start();
 //var_dump($donnee);
 //var_dump($detail);
 include("database.php");
@@ -26,20 +27,20 @@ while($donnee = $detail->fetch())
              <img src="images/<?php echo $donnee['isbn'];?>.jpg">
 
              <p>
-                 Titre : <?php echo $donnee['titre'];?> <br>
+                            Titre : <?php echo $donnee['titre'];?> <br>
 
                     Auteur : <?php echo $donnee['prenom'] . " " . $donnee['nom'];?> <br>
 
-                    Rôle : <?php echo $donnee['libelle_role'];?> <br>
+                                Rôle : <?php echo $donnee['libelle_role'];?> <br>
 
-                    Editeur : <?php echo $donnee['libelle_editeur'];?> <br>
+                                 Editeur : <?php echo $donnee['libelle_editeur'];?> <br>
 
-                    Genre : <?php echo $donnee['libelle_genre'];?> <br>
+                                     Genre : <?php echo $donnee['libelle_genre'];?> <br>
 
-                    Langue : <?php echo $donnee['libelle_langue'];?><br>
+                                     Langue : <?php echo $donnee['libelle_langue'];?><br>
 
-                    Nombre de pages : <?php
-
+                                     Nombre de pages : <?php
+                        //verification nb de page
                     if($donnee['nbpages'] = "NULL"){
                         echo "Inconnu";
                     }else{
@@ -47,6 +48,10 @@ while($donnee = $detail->fetch())
                     }?> <br>
 
                     Année de publication : <?php echo $donnee['annee'];?>
+                    <br>
+                    <!-- Redirection vers panier.php avec isbn et idmembre pour mettre dans la base de donnée -->
+                    <a href="panier.php?isbn=<?php echo $_GET['isbn']?>&idmembre=<?php echo $_SESSION['id']?>" style="color:darkgrey;font-size:30px;">Ajouter au panier</a>
+                    
              </p>
              </div>
 

@@ -1,10 +1,12 @@
 
-<html style="background-color: rgb(43, 41, 41)">
 <?php
 session_start();
 /*Formulaire Ajout auteur */
 //include("menu.php");
 ?>
+
+<html style="background-color: rgb(43, 41, 41)">
+
 <div id="nav"><a href="index.php" style="font-size: 50px; color: white"> BookAddict </a></div>
 </br>
 <p style="margin-left: 500px; font-size: 45px; color: white"> Ajouter un Auteur</p>

@@ -16,11 +16,19 @@ session_start();
 <div id="nav"><p style="font-size: 90px; color: white; background-color :rgb(20, 21, 41);padding-left:480px;margin-left:-480px;"> BookAddict</p></div>
 
 <?php 
+
 include("database.php"); ?>
 
-<h2>Bienvenue <?php 
-echo $_SESSION['Type'];
-echo $_SESSION['Pseudo']; ?></h2>
+<h2 style="color:white; margin-left:130px;">Bienvenue
+ <?php 
+  if(isset($_SESSION['id']) ) {
+
+//echo $_SESSION['Type'];
+echo $_SESSION['Pseudo'];
+  }else{
+    echo "visiteur";
+  } ?>
+</h2>
 
 
 
@@ -37,7 +45,6 @@ echo $_SESSION['Pseudo']; ?></h2>
 
 </br>
 </br>
-<a href="inscription.php">S'inscrire</a></br>
 <a href="connexion.php">Se connecter</a></br>
 <a href="deconnexion.php">Se déconnecter</a></br>
 <?php }
@@ -51,7 +58,6 @@ echo $_SESSION['Pseudo']; ?></h2>
 
     </br>
     </br>
-    <a href="inscription.php">S'inscrire</a></br>
     <a href="connexion.php">Se connecter</a></br>
     <a href="deconnexion.php">Se déconnecter</a></br>
 
@@ -63,8 +69,8 @@ echo $_SESSION['Pseudo']; ?></h2>
     <a href="#"> Supprimer un livre </a></br>
 
     </br>
-    visiteur
     </br>
+    <a href="membre.php?idmembre=<?php echo $_SESSION['id'];?>">Espace Membre</a></br>
     <a href="inscription.php">S'inscrire</a></br>
     <a href="connexion.php">Se connecter</a></br>
     <a href="deconnexion.php">Se déconnecter</a></br>

@@ -1,6 +1,6 @@
 <?php
 session_start();
- 
+ //connexion avec vérification et message d'erreur
 include("database.php");
  
 if(isset($_POST['formconnexion'])) {
@@ -23,7 +23,7 @@ if(isset($_POST['formconnexion'])) {
       $erreur = "Tous les champs doivent être complétés !  è_é  ";
    }
 }
-?>
+// affichage de l'interface de connexion?>
 <html style="background-color :rgb(20, 31, 41)">
    <head>
       <title >Connexion</title>

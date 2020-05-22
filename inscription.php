@@ -1,6 +1,7 @@
 <?php
+session_start();
 include("database.php");
- 
+ // hachage du mot de passe + vérification !empty du pseudo + mdp 
 if(isset($_POST['forminscription'])) {
    $pseudo = htmlspecialchars($_POST['pseudo']);
    
@@ -9,7 +10,7 @@ if(isset($_POST['forminscription'])) {
    if(!empty($_POST['pseudo']) AND  !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
       $pseudolength = strlen($pseudo);
       if($pseudolength <= 255) {
-        
+         //requete + message d'erreur
                   if($mdp == $mdp2) {
                      $insertmbr = $bdd->prepare('INSERT INTO Membre(Pseudo, Mdp, Type) VALUES(?, ?, "membre")');
                      $insertmbr->execute(array($pseudo, $mdp));
@@ -24,7 +25,8 @@ if(isset($_POST['forminscription'])) {
       $erreur = "Tous les champs doivent être complétés !";
    }
 }
-?>
+
+// affichage interface inscription?>
 
 
 <html style="background-color :rgb(20, 21, 41)">
